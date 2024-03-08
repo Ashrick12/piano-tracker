@@ -1,22 +1,16 @@
 {
-      "want": [
-            
-      ],
-      "learned": [
-           
-      ],
-      "learning": [
-        
-      ],
-      "sight-speed": [
-            {
-                  "time": "5:00",
-                  "hits": "58",
-                  "misses": "14",
-                  "hpm": "11.6",
-                  "note-count": "2",
-                  "date": "01-23-2024"
-            },
-      ],
-      "scale-speed": []
+   "want": [],
+   "learned": [],
+   "learning": [],
+   "sight-speed": [
+      {
+         "time": "5:00",
+         "hits": "58",
+         "misses": "14",
+         "hpm": "11.6",
+         "note-count": "2",
+         "date": "01-23-2024"
+      }
+   ],
+   "scale-speed": []
 }

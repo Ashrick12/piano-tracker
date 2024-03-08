@@ -3,11 +3,48 @@ body {
    color: whitesmoke;
    font-size: 2rem;
    min-height: 85.5vh;
-   margin: 0 auto;
-   border: 10px outset whitesmoke;
-   padding: 2.5em;
+   margin: 0;
+   padding: 2vw 5vw;
+   border: 10px outset #ddd;
+   box-sizing: border-box;
+   transition: margin 2s;
 }
-
+@media (min-width: 1400px) {
+   body {
+      margin-left: 5%;
+      margin-right: 5%;
+   }
+}
+@media (min-width: 1600px) {
+   body {
+      margin-left: 8%;
+      margin-right: 8%;
+   }
+}
+@media (min-width: 1800px) {
+   body {
+      margin-left: 11%;
+      margin-right: 11%;
+   }
+}
+@media (min-width: 2000px) {
+   body {
+      margin-left: 14%;
+      margin-right: 14%;
+   }
+}
+@media (min-width: 2200px) {
+   body {
+      margin-left: 17%;
+      margin-right: 17%;
+   }
+}
+@media (min-width: 2400px) {
+   body {
+      margin-left: 20%;
+      margin-right: 20%;
+   }
+}
 header {
    text-align: center;
 }

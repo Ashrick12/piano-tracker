@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="viewport" content="width=device-width, initial-scale=0.6" />
       <title>Piano Tracker</title>
       <link rel="stylesheet" href="/static/styles/style.css" />
       <link
@@ -12,9 +12,10 @@
    </head>
    <body>
       <header>
-         <h1>Want To Learn</h1>
+         <h1>Sight Reading Speed</h1>
       </header>
       <hr />
+      <p style="color: red">{{ message }}</p>
       <main>
          <nav>
             <ul>
@@ -50,7 +51,11 @@
             <ul>
                {% for piece in pieces %}
                <li>
-                  {{piece['date']}}
+                  <form method="post">
+                     {{piece['date']}}
+                     <input type="hidden" name="delete" value="{{piece}}" />
+                     <button type="submit" id="del-btn">X</button>
+                  </form>
                   <ul>
                      <li>Time: {{piece['time']}}</li>
                      <li>Hits: {{piece['hits']}}</li>
@@ -61,7 +66,73 @@
                </li>
                {% endfor %}
             </ul>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+            <canvas
+               id="sight-chart"
+               style="
+                  width: 100%;
+                  max-width: 700px;
+                  background-color: rgb(0, 0, 0);
+                  border: 1px rgb(9, 9, 9) solid;
+               "
+            ></canvas>
+            <script type="text/javascript">
+               let content = {{ pieces | tojson | safe }};
+            </script>
+            <script src="{{ url_for('static', filename='js/sight-chart.js')}}"></script>
          </section>
+         <form method="post">
+            <fieldset>
+               <legend>Add Data</legend>
+               <p>
+                  <label for="date">Date:</label>
+                  <input type="date" name="date" id="date" required />
+               </p>
+               <p>
+                  <label for="time">Time:</label>
+                  <input
+                     type="text"
+                     name="time"
+                     id="time"
+                     placeholder="5:00"
+                     value="5:00"
+                     required
+                  />
+               </p>
+               <p>
+                  <label for="hits">Hits:</label>
+                  <input
+                     type="number"
+                     name="hits"
+                     id="hits"
+                     placeholder="number of hits here"
+                     required
+                  />
+               </p>
+               <p>
+                  <label for="misses">Misses:</label>
+                  <input
+                     type="number"
+                     name="misses"
+                     id="misses"
+                     placeholder="number of misses here"
+                     required
+                  />
+               </p>
+               <p>
+                  <label for="note-count">Note Count:</label>
+                  <input
+                     type="number"
+                     name="note-count"
+                     id="note-count"
+                     placeholder="number of notes here"
+                     required
+                  />
+               </p>
+               <button type="submit" id="submit-btn">Submit</button>
+               <button type="reset" id="reset-btn">Reset</button>
+            </fieldset>
+         </form>
       </main>
    </body>
 </html>

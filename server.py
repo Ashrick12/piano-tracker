@@ -70,6 +70,38 @@ def learning():
 @app.route('/sight-speed.html', methods=["GET", "POST"])
 def sight_speed():
     contents = read_file()
+
+    if request.method == "POST":
+        date = request.form.get('date')
+        time = request.form.get('time')
+        hits = request.form.get('hits')
+        misses = request.form.get('misses')
+        note_count = request.form.get('note-count')
+
+        delete = request.form.get('delete')
+
+        
+        if hits != None and delete == None:
+            if not ':' in time:
+                return render_template('sight-speed.html', pieces=contents['sight-speed'], message='Error: Invalid Time')
+            hpm = time.split(':')
+            hpm = float(hpm[0]) + float(hpm[1])/60
+            hpm = float(hits)/float(hpm)
+
+            entry = {
+            "time": time,
+            "hits": hits,
+            "misses": misses,
+            "hpm": str(hpm),
+            "note-count": note_count,
+            "date": date
+        }
+            contents['sight-speed'].append(entry)
+            write_file(contents)
+        elif delete != None:
+            contents['sight-speed'] = [item for item in contents['sight-speed'] if str(item) != delete]
+            write_file(contents)
+
     return render_template('sight-speed.html', pieces=contents['sight-speed'])
 
 if __name__ == '__main__':
