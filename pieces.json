@@ -1,0 +1,107 @@
+{
+      "want": [
+            [
+                  "Kaer Morhen",
+                  "https://musescore.com/cinnamonhare/scores/6069960"
+            ],
+            [
+                  "Prelude in E Minor",
+                  "https://musescore.com/user/19710/scores/65474"
+            ],
+            [
+                  "Hollow Knight Main Theme",
+                  "https://musescore.com/user/5174461/scores/3714306"
+            ],
+            [
+                  "The White Lady",
+                  "https://musescore.com/user/5174461/scores/4792347"
+            ],
+            [
+                  "Love Story",
+                  "https://musescore.com/user/22591/scores/5547535"
+            ],
+            [
+                  "Mariage d'Amour",
+                  "https://musescore.com/user/97638/scores/3387831"
+            ],
+            [
+                  "Cara Mia Addio",
+                  "https://musescore.com/user/3771991/scores/5628149"
+            ],
+            [
+                  "Secunda",
+                  "https://musescore.com/user/2466621/scores/4811536"
+            ],
+            [
+                  "Far Horizons",
+                  "https://musescore.com/user/2466621/scores/3635941"
+            ],
+            [
+                  "House Stark Medley",
+                  "https://musescore.com/user/2466621/scores/4222811"
+            ],
+            [
+                  "The Medallion Calls",
+                  "https://musescore.com/user/8991661/scores/5053655"
+            ],
+            [
+                  "Cornfield Chase",
+                  "https://musescore.com/user/35088450/scores/6666680"
+            ],
+            [
+                  "Ezio's Family",
+                  "https://musescore.com/user/6700826/scores/3681986"
+            ],
+            [
+                  "Davy Jones",
+                  "https://musescore.com/user/8991661/scores/5092110"
+            ],
+            [
+                  "One Day",
+                  "https://musescore.com/user/8991661/scores/4640966"
+            ]
+      ],
+      "learned": [
+            [
+                  "Iudex Gundyr Theme",
+                  "https://musescore.com/user/7940316/scores/2345971"
+            ]
+      ],
+      "learning": [
+            [
+                  "The Streets of Whiterun",
+                  "https://musescore.com/user/12574286/scores/5883575"
+            ],
+            [
+                  "Great Grey Wolf Sif",
+                  "https://musescore.com/user/61833/scores/6648950"
+            ]
+      ],
+      "sight-speed": [
+            {
+                  "time": "5:00",
+                  "hits": "58",
+                  "misses": "14",
+                  "hpm": "11.6",
+                  "note-count": "2",
+                  "date": "01-23-2024"
+            },
+            {
+                  "time": "5:00",
+                  "hits": "65",
+                  "misses": "3",
+                  "hpm": "13.0",
+                  "note-count": "2",
+                  "date": "01-27-2024"
+            },
+            {
+                  "time": "5:00",
+                  "hits": "80",
+                  "misses": "4",
+                  "hpm": "16.0",
+                  "note-count": "2",
+                  "date": "01-27-2024"
+            }
+      ],
+      "scale-speed": []
+}

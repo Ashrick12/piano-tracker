@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Piano Tracker</title>
+      <link rel="stylesheet" href="/static/styles/style.css" />
+      <link
+         rel="stylesheet"
+         href=" {{ url_for('static', filename='styles/style.css') }}"
+      />
+   </head>
+   <body>
+      <header>
+         <h1>Want To Learn</h1>
+      </header>
+      <hr />
+      <main>
+         <nav>
+            <ul>
+               <li>
+                  <p>
+                     <a href="want-to-learn.html">Want To Learn</a>
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <a href="learned.html">Learned</a>
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <a href="learning.html">Learning</a>
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <a href="index.html">Home</a>
+                  </p>
+               </li>
+               <li>
+                  <p>
+                     <a href="scales-speed.html">Scales and Chords Speed</a>
+                  </p>
+               </li>
+            </ul>
+         </nav>
+         <hr />
+         <section id="items">
+            <ul>
+               {% for piece in pieces %}
+               <li>
+                  {{piece['date']}}
+                  <ul>
+                     <li>Time: {{piece['time']}}</li>
+                     <li>Hits: {{piece['hits']}}</li>
+                     <li>Misses: {{piece['misses']}}</li>
+                     <li>Hits Per Minute: {{piece['hpm']}}</li>
+                     <li>Note Count: {{piece['note-count']}}</li>
+                  </ul>
+               </li>
+               {% endfor %}
+            </ul>
+         </section>
+      </main>
+   </body>
+</html>
