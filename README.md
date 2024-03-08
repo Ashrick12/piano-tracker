@@ -1,6 +1,7 @@
 # Piano Tracker
-
 Piano Tracker is a Flask-based web application that allows you to track your progress in learning piano pieces.
+
+<img src="https://i.imgur.com/dakqLLV.png" width="850">
 
 ## Features
 
