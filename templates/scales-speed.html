@@ -47,6 +47,8 @@
             </ul>
          </nav>
          <hr />
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
          <section id="items">
             <ul>
                {% for category in categories %}
@@ -76,23 +78,22 @@
                      </li>
                   </ul>
                   {% endfor %}
+                  <canvas
+                     id="{{category}}-chart"
+                     style="
+                        width: 100%;
+                        max-width: 700px;
+                        background-color: rgb(0, 0, 0);
+                        border: 1px rgb(9, 9, 9) solid;
+                     "
+                  ></canvas>
                </details>
                {% endfor %}
+               <script type="text/javascript">
+                  let content = {{ categories | tojson | safe }};
+               </script>
+               <script src="{{ url_for('static', filename='js/scales-chart.js')}}"></script>
             </ul>
-            <!--             <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-            <canvas
-               id="sight-chart"
-               style="
-                  width: 100%;
-                  max-width: 700px;
-                  background-color: rgb(0, 0, 0);
-                  border: 1px rgb(9, 9, 9) solid;
-               "
-            ></canvas>
-                   <script type="text/javascript">
-               let content = {{ categories | tojson | safe }};
-            </script>
-            <script src="{{ url_for('static', filename='js/sight-chart.js')}}"></script> -->
          </section>
          <form method="post">
             <fieldset>
