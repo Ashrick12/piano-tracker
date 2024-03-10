@@ -10,7 +10,7 @@ for (let i = 0; i < content.length; i++) {
    backgroundColor.push(colors[i % colors.length]);
 }
 
-Chart.defaults.global.defaultFontColor = "white";
+Chart.defaults.global.defaultFontColor = "#D3D3D3";
 
 new Chart("sight-chart", {
    type: "line",

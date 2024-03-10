@@ -1,9 +1,6 @@
 let colors = ["blue", "red", "green", "orange", "purple"];
 
-Chart.defaults.global.defaultFontColor = "white";
-
-console.log("Executed");
-console.log(content);
+Chart.defaults.global.defaultFontColor = "#D3D3D3";
 
 function timeToSeconds(time) {
    let parts = time.split(":");
@@ -17,14 +14,12 @@ for (let key in content) {
    let backgroundColor = [];
 
    for (let value in content[key]) {
-      console.log(content[key][value]["date"]);
-      console.log(timeToSeconds(content[key][value]["time"]));
       xValues.push(content[key][value]["date"]);
       yValues.push(timeToSeconds(content[key][value]["time"]));
 
       backgroundColor.push(colors[value % colors.length]);
    }
-   new Chart(`${key}` + "-chart", {
+   new Chart(key + "-chart", {
       type: "line",
       data: {
          labels: xValues,

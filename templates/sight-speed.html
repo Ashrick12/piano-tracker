@@ -17,7 +17,7 @@
       <hr />
       <p style="color: red">{{ message }}</p>
       <main>
-         <nav>
+         <nav id="navbar">
             <ul>
                <li>
                   <p>
@@ -48,7 +48,7 @@
          </nav>
          <hr />
          <section id="items">
-            <ul>
+            <ul id="list">
                {% for piece in pieces %}
                <li>
                   <form method="post">
@@ -72,8 +72,8 @@
                style="
                   width: 100%;
                   max-width: 700px;
-                  background-color: rgb(0, 0, 0);
-                  border: 1px rgb(9, 9, 9) solid;
+                  background-color: #2b2b2b;
+                  border: 5px #242424 solid;
                "
             ></canvas>
             <script type="text/javascript">

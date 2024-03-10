@@ -17,7 +17,7 @@
       <hr />
       <p style="color: red">{{ message }}</p>
       <main>
-         <nav>
+         <nav id="navbar">
             <ul>
                <li>
                   <p>
@@ -50,7 +50,7 @@
          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
          <section id="items">
-            <ul>
+            <ul id="list">
                {% for category in categories %}
                <details>
                   <summary>{{category}}</summary>
@@ -83,8 +83,8 @@
                      style="
                         width: 100%;
                         max-width: 700px;
-                        background-color: rgb(0, 0, 0);
-                        border: 1px rgb(9, 9, 9) solid;
+                        background-color: #2b2b2b;
+                        border: 5px #242424 solid;
                      "
                   ></canvas>
                </details>
